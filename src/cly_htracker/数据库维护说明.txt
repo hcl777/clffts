@@ -1,0 +1,16 @@
+
+使用sqlyog:
+
+1. 清理peer表，删除不必要的用户
+   delete from peer where id=16;
+
+2. 清理source表
+   1).删除不存在的peer_id记录:
+		SELECT * FROM source WHERE source.peer_id NOT IN (SELECT id FROM peer);
+		删除所有记录；
+
+3. 清理file表 
+   删除不存在于source表中file_id的记录:
+		SELECT * FROM file WHERE file.id NOT IN (SELECT distinct source.file_id FROM source);
+		删除所有记录；
+

@@ -1,0 +1,13 @@
+
+
+linux版本：
+命令：
+安装：		sh cly_down.sh setup
+卸载：		cly_down.sh unsetup
+设置开机启动：	cly_down.sh boot_on
+取消开机启动：	cly_down.sh boot_off
+运行：		cly_down.sh start
+停止：		cly_down.sh stop
+
+配置：
+打开/opt/clyum/cly_down.xml

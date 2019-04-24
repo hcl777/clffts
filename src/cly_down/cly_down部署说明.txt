@@ -1,0 +1,13 @@
+
+cly_down部署：
+1。将程序包拷到/opt/clyun/cly_down" 目录(非强制）。
+2。将cly_down 程序和cly_down.sh 程序改为可执行 chmod +x 。
+3。设置开机启动：执行"/opt/clyun/cly_down/cly_down.sh boot_on" 。
+4。初始运行注册：./cly_down 前台运行，见登录成功（login ok)，则结束程序。
+   登录数据库，将对应的peer_type改为1。
+5。设置系统打开句柄限制（支持大并发打开文件总数）："ulimit -n"。
+6。修改配置，配置共享扫描目录到cly_down.xml 中的share_path 节点，多目录用|分隔。
+7。运行程序：/opt/clyun/cly_down/cly_down.sh start
+8。结束程序：/opt/clyun/cly_down/cly_down.sh stop
+
+

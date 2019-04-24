@@ -1,0 +1,26 @@
+
+
+cly_down.xml
+查看MID值：
+/opt/clyun/cly_down -c;
+其中peer_name的值为 mid;
+
+1. 配置扫描共享发布种子
+<p n="share_path" suffix="mp4|mkv|ape">/data/film/</p>
+说明：
+suffix --- 指定要扫描的文件后辍名，多个路径用“|”分隔。
+
+2. 配置自动下载
+<p n="down_path" active="2" freespace="30G">/data/film1/>50G|/data2/film1/>50G</p>
+active --- 并发下载数，0表示不执行下载任务
+freespace --- 表示下载目录保留最少剩余空间
+配置路径格式：  path1>50G|path2>50G --- 表示path1的总空间大于50G，以防某次系统运行mount硬盘失败，而导致写爆系统盘。
+
+
+3。启动程序
+配置完成后
+cly_down.sh start
+
+
+
+

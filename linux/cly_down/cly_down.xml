@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gbk"?>
+<conf>
+  <main>
+    <p n="server_tracker">125.88.158.121</p>
+    <p n="server_stun">125.88.158.121:8111</p>
+    <p n="share_path" suffix="mp4|mkv|ape">/data/film/</p>
+    <p n="down_path" active="2" freespace="30G">/data/film1/>50G</p>
+    <p n="limit_share_cnns">600</p>
+    <p n="limit_share_speed">0</p>
+    <p n="limit_down_speed">0</p>
+    <p n="uac_port">9200</p>
+    <p n="uac_mtu">1400</p>
+    <p n="uac_limit_sendspeed_i">0</p>
+  </main>
+</conf>
+

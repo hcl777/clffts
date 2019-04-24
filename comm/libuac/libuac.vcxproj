@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{18B829D9-D3F4-415E-A11E-2D4AFF79F5D5}</ProjectGuid>
+    <RootNamespace>libuac</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)../../~code_temp\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)../../~code_temp\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="doc\uac算法.doc" />
+    <None Include="doc\新uac算法.doc" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="uac.cpp" />
+    <ClCompile Include="uac_basetypes.cpp" />
+    <ClCompile Include="uac_cyclist.cpp" />
+    <ClCompile Include="uac_File32.cpp" />
+    <ClCompile Include="uac_IniFile.cpp" />
+    <ClCompile Include="uac_mempool.cpp" />
+    <ClCompile Include="uac_rbtmap.cpp" />
+    <ClCompile Include="uac_Scheduler.cpp" />
+    <ClCompile Include="uac_SerialStream.cpp" />
+    <ClCompile Include="uac_SimpleString.cpp" />
+    <ClCompile Include="uac_Singleton.cpp" />
+    <ClCompile Include="uac_SockAcceptor.cpp" />
+    <ClCompile Include="uac_Socket.cpp" />
+    <ClCompile Include="uac_SocketSelector.cpp" />
+    <ClCompile Include="uac_sockpool.cpp" />
+    <ClCompile Include="uac_Speedometer.cpp" />
+    <ClCompile Include="uac_statistics.cpp" />
+    <ClCompile Include="uac_SynchroObj.cpp" />
+    <ClCompile Include="uac_Thread.cpp" />
+    <ClCompile Include="uac_Timer.cpp" />
+    <ClCompile Include="uac_UDPAcceptor.cpp" />
+    <ClCompile Include="uac_UDPChannel.cpp" />
+    <ClCompile Include="uac_UDPConfig.cpp" />
+    <ClCompile Include="uac_UDPConnector.cpp" />
+    <ClCompile Include="uac_UDPProtocol.cpp" />
+    <ClCompile Include="uac_UDPSpeedCtrl2.cpp" />
+    <ClCompile Include="uac_UDPStunClient.cpp" />
+    <ClCompile Include="uac_UDPStunProtocol.cpp" />
+    <ClCompile Include="uac_UDPStunServer.cpp" />
+    <ClCompile Include="uac_UDPTestSpeed.cpp" />
+    <ClCompile Include="uac_Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="uac.h" />
+    <ClInclude Include="uac_basetypes.h" />
+    <ClInclude Include="uac_Channel.h" />
+    <ClInclude Include="uac_cyclist.h" />
+    <ClInclude Include="uac_File32.h" />
+    <ClInclude Include="uac_IniFile.h" />
+    <ClInclude Include="uac_mempool.h" />
+    <ClInclude Include="uac_ntypes.h" />
+    <ClInclude Include="uac_rbtmap.h" />
+    <ClInclude Include="uac_rlist.h" />
+    <ClInclude Include="uac_Scheduler.h" />
+    <ClInclude Include="uac_SerialStream.h" />
+    <ClInclude Include="uac_SimpleString.h" />
+    <ClInclude Include="uac_Singleton.h" />
+    <ClInclude Include="uac_SockAcceptor.h" />
+    <ClInclude Include="uac_Socket.h" />
+    <ClInclude Include="uac_SocketSelector.h" />
+    <ClInclude Include="uac_sockpool.h" />
+    <ClInclude Include="uac_Speaker.h" />
+    <ClInclude Include="uac_Speedometer.h" />
+    <ClInclude Include="uac_statistics.h" />
+    <ClInclude Include="uac_SynchroObj.h" />
+    <ClInclude Include="uac_Thread.h" />
+    <ClInclude Include="uac_Timer.h" />
+    <ClInclude Include="uac_UDPAcceptor.h" />
+    <ClInclude Include="uac_UDPChannel.h" />
+    <ClInclude Include="uac_UDPConfig.h" />
+    <ClInclude Include="uac_UDPConnector.h" />
+    <ClInclude Include="uac_UDPProtocol.h" />
+    <ClInclude Include="uac_UDPSpeedCtrl2.h" />
+    <ClInclude Include="uac_UDPStunClient.h" />
+    <ClInclude Include="uac_UDPStunProtocol.h" />
+    <ClInclude Include="uac_UDPStunServer.h" />
+    <ClInclude Include="uac_UDPTestSpeed.h" />
+    <ClInclude Include="uac_Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="使用说明.txt" />
+    <Text Include="算法.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

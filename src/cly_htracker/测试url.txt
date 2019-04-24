@@ -1,0 +1,57 @@
+
+
+
+http://127.0.0.1:8098/clyun/
+http://127.0.0.1:8098/clyun/login.php?peer_name=95546900000045bb&ver=cly_down_20170316
+http://127.0.0.1:8098/clyun/keepalive.php?peer_id=3
+http://127.0.0.1:8098/clyun/update_nat.php?peer_id=3&addr=192.168.5.84:9200:1
+
+http://127.0.0.1:8098/clyun/report_fdfile.php?peer_id=3&fields=hash&val=1|hashtest|2|nametest|subhashtest+=3
+http://127.0.0.1:8098/clyun/report_fdfile.php?peer_id=3&fields=hash&val=9|hashtest
+http://127.0.0.1:8098/clyun/report_progress.php
+http://127.0.0.1:8098/clyun/search_sources.php?peer_id=3&hash=hashtest
+http://127.0.0.1:8098/clyun/report_error.php?peer_name=test_name&err=5&appname=apptest&appver=apptest_ver123&systemver=win10&description=test_error
+
+//同步
+发布端生成以下XML
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<list id="hids">
+		<p>hid1</p>
+		<p>hid2</p>
+	</list>
+	<list id="files">
+		<p>file_hash1</p>
+		<p>file_hash2</p>
+		...
+	</list>
+</root>
+并调用以下接口post给同步系统，同步系统会执行同步。
+http://127.0.0.1:8098/clyun/new_task.php
+http://127.0.0.1:8098/clyun/set_task_state.php?task_id=3&state=2
+http://127.0.0.1:8098/clyun/get_task_info.php?task_id=3
+
+
+http://127.0.0.1:8098/clyun/get_ddlist.php?peer_id=3&task_id=0
+
+http://127.0.0.1:8098/clyun/get_fini_chsum.php?peer_id=3
+http://127.0.0.1:8098/clyun/get_finifiles.php?peer_id=14
+
+125.88.158.121
+
+http://125.88.158.121/clyun/login.php?peer_name=95546900000045bb&ver=cly_down_20170316
+
+
+客户端接口：
+http://127.0.0.1:9880/version
+
+http://127.0.0.1:9880/clyun/set_speed.php?down=200&up=50
+
+http://127.0.0.1:9880/clyun/share_file.php?path=1234&name=5666
+http://127.0.0.1:9880/clyun/get_allfileinfo.php
+
+http://127.0.0.1:9880/clyun/update_ddlist.php
+
+
+
+http://127.0.0.1:9880/clyun/downauto_allinfo.php

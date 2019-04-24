@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="json_reader.cpp" />
+    <ClCompile Include="json_value.cpp" />
+    <ClCompile Include="json_writer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="json_batchallocator.h" />
+    <ClInclude Include="json_tool.h" />
+    <ClInclude Include="json\assertions.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\autolink.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\config.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\features.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\forwards.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\value.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\version.h">
+      <Filter>json</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json_internalarray.inl" />
+    <None Include="json_internalmap.inl" />
+    <None Include="json_valueiterator.inl" />
+    <None Include="version.h.in" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="json">
+      <UniqueIdentifier>{87c7bc1c-0ffe-44ab-a316-4fa5fc476951}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

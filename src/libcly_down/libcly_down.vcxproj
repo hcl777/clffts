@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cly_checkhash.cpp" />
+    <ClCompile Include="cly_config.cpp" />
+    <ClCompile Include="cly_d.cpp" />
+    <ClCompile Include="cly_downAuto.cpp" />
+    <ClCompile Include="cly_downinfo.cpp" />
+    <ClCompile Include="cly_download.cpp" />
+    <ClCompile Include="cly_downloadMgr.cpp" />
+    <ClCompile Include="cly_error.cpp" />
+    <ClCompile Include="cly_fileinfo.cpp" />
+    <ClCompile Include="cly_filemgr.cpp" />
+    <ClCompile Include="cly_httpapi.cpp" />
+    <ClCompile Include="cly_jni.cpp" />
+    <ClCompile Include="cly_limitspeed_ws.cpp" />
+    <ClCompile Include="cly_localCmd.cpp" />
+    <ClCompile Include="cly_peer.cpp" />
+    <ClCompile Include="cly_peerRecycling.cpp" />
+    <ClCompile Include="cly_proto.cpp" />
+    <ClCompile Include="cly_schedule.cpp" />
+    <ClCompile Include="cly_server.cpp" />
+    <ClCompile Include="cly_serverData.cpp" />
+    <ClCompile Include="cly_trackerCmd.cpp" />
+    <ClCompile Include="cl_uchannel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cly_checkhash.h" />
+    <ClInclude Include="cly_config.h" />
+    <ClInclude Include="cly_d.h" />
+    <ClInclude Include="cly_downAuto.h" />
+    <ClInclude Include="cly_download.h" />
+    <ClInclude Include="cly_downloadMgr.h" />
+    <ClInclude Include="cly_error.h" />
+    <ClInclude Include="cly_fileinfo.h" />
+    <ClInclude Include="cly_filemgr.h" />
+    <ClInclude Include="cly_httpapi.h" />
+    <ClInclude Include="cly_jni.h" />
+    <ClInclude Include="cly_limitspeed_ws.h" />
+    <ClInclude Include="cly_localCmd.h" />
+    <ClInclude Include="cly_peer.h" />
+    <ClInclude Include="cly_peerRecycling.h" />
+    <ClInclude Include="cly_proto.h" />
+    <ClInclude Include="cly_schedule.h" />
+    <ClInclude Include="cly_server.h" />
+    <ClInclude Include="cly_serverData.h" />
+    <ClInclude Include="cly_trackerCmd.h" />
+    <ClInclude Include="cl_uchannel.h" />
+    <ClInclude Include="cly_downinfo.h" />
+    <ClInclude Include="cly_downAutoInfo.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{61BC2610-0F75-47D8-9586-6C6796D300E7}</ProjectGuid>
+    <RootNamespace>libcly_down</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)../../~code_temp\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)../../~code_temp\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../comm/src/libcl_util;../../../comm/src/libhttpsvr;../../../comm/src/libuac;../libcly_tracker</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../../../comm/src/libcl_util;../../../comm/src/libhttpsvr;../../../comm/src/libuac;../libcly_tracker</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
